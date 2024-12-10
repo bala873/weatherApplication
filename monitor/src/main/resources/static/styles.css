@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #000428, #004e92); /* Dark sky-themed gradient */
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add gap between input and button */
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    width: calc(100% - 120px);
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    width: 100px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.weather-info {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.weather-info i {
+    font-size: 48px;
+    margin-bottom: 10px;
+}

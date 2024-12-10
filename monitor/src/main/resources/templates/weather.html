@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Details</h1>
+        <div class="weather-info">
+            <h2 th:text="${city} + ', ' + ${country}"></h2>
+            <i th:class="${weatherIcon}"></i>
+			<!--<p>Current Time: <span th:text="${currentTime}"></span></p> -->
+            <p th:text="${weatherDescription}"></p>
+            <p>Temperature: <span th:text="${temperature}"></span>°C</p>
+            <p>Humidity: <span th:text="${humidity}"></span>%</p>
+            <p>Wind Speed: <span th:text="${windSpeed}"></span> m/s</p>
+        </div>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
