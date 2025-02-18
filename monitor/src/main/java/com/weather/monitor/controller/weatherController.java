@@ -1,7 +1,6 @@
 package com.weather.monitor.controller;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -41,13 +40,6 @@ public class weatherController {
 		model.addAttribute("windSpeed",weatherResponse.getWind().getSpeed());
 		String weatherIcon = "wi wi-owm-"+weatherResponse.getWeather().get(0).getId();
 		model.addAttribute("weatherIcon",weatherIcon);
-		String timeUrl = "http://worldtimeapi.org/api/timezone/Asia/Kolkata"; // Replace with appropriate timezone API 
-		String localTime = restTemplate.getForObject(timeUrl, String.class); model.addAttribute("localTime", localTime);
-		// Add current time to the model 
-//		LocalDateTime now = LocalDateTime.now(); 
-//		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-//		String formattedNow = now.format(formatter);
-//		model.addAttribute("currentTime", formattedNow);
 	}else {
 		model.addAttribute("error","city not found");
 	}
